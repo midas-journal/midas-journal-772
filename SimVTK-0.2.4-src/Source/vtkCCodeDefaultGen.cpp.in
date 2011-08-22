@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+@HEADERS@
+
+// Used to have proper indentation in the XML file
+void indent(FILE *fp, int indentation)
+{
+  while (indentation > 0)
+    {
+    fprintf(fp, "\t");
+    indentation--;
+    }
+}
+
+int main(int argc,char *argv[])
+{
+  FILE *fin;
+  FILE *fout;
+
+  if (argc != 3)
+    {
+    fprintf(stderr,
+            "Usage: %s class_name output_file\n",argv[0]);
+    exit(1);
+    }
+
+  fout = fopen(argv[2],"w");
+
+  if (!fout)
+    {
+    fprintf(stderr,"Error opening output file %s\n",argv[2]);
+    exit(1);
+    }
+
+  // DO THE REAL STUFF HERE
+  @DEFAULT_VALUE_CHECKS@
+
+  fclose (fout);
+
+  return 0;
+}

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------------------------
+#
+# SimvtkConfig.cmake - SimVTK CMake configuration file for third-party
+# external projects.
+#
+# This file is configured by SimVTK and used by the UseVTK.cmake module
+# to load VTK's settings for an external project.
+
+# The location of the UseSimVTK.cmake file.
+SET(SIMVTK_USE_FILE "@SIMVTK_USE_FILE@")

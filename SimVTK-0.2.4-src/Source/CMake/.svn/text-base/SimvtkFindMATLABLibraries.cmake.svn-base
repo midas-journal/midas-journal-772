@@ -1,0 +1,114 @@
+# SimvtkFindMATLABLibraries.cmake
+#
+# 1 macro, 0 arguments.
+#
+# Macro: SIMVTK_FIND_MATLAB_LIBRARIES
+#     ARGUMENTS: None
+#     OUTPUT:
+#        - Each necessary library is found and given a variable similar
+#            to ${MATLAB_LIBRARY_<library_name>}
+#        - All necessary MATLAB libraries for each platform found and added
+#            to the ${MATLAB_LIBRARIES} variable.
+#        - ${MATLAB_INCLUDE_DIR} variable set.
+#        - ${SIMULINK_INCLUDE_DIR} variable set.
+
+MACRO(SIMVTK_FIND_MATLAB_LIBRARIES)
+
+  IF(WIN32)
+    SET(MATLAB_ARCH_DIR "${MATLAB_ROOT}/extern/lib/win32/microsoft")
+
+    SET(LOCATE_LIBRARIES
+      "LIBMEX"
+      "LIBMX"
+      "LIBMAT"
+      "LIBENG"
+    )
+  ENDIF(WIN32)
+
+  IF(NOT WIN32 AND NOT APPLE)
+        IF(NOT "${CMAKE_SIZEOF_VOID_P}")
+          MESSAGE(FATAL_ERROR "CMAKE_SIZEOF_VOID_P not set, please delete internal cache enteries and re-run cmake")
+        ENDIF(NOT "${CMAKE_SIZEOF_VOID_P}")
+
+    IF("${CMAKE_SIZEOF_VOID_P}" GREATER 4)
+      SET(MATLAB_ARCH_DIR "${MATLAB_ROOT}/bin/glnxa64")
+    ELSE("${CMAKE_SIZEOF_VOID_P}" GREATER 4)
+      SET(MATLAB_ARCH_DIR "${MATLAB_ROOT}/bin/glnx86")
+    ENDIF("${CMAKE_SIZEOF_VOID_P}" GREATER 4)
+
+    SET(LOCATE_LIBRARIES
+      "MEX"
+      "MX"
+      "MAT"
+      "ENG"
+    )
+  ENDIF(NOT WIN32 AND NOT APPLE)
+
+  IF(APPLE)
+    IF("${CMAKE_OSX_ARCHITECTURES}" STREQUAL "i386")
+      SET(MATLAB_ARCH_DIR "${MATLAB_ROOT}/bin/maci")
+    ELSE("${CMAKE_OSX_ARCHITECTURES}" STREQUAL "i386")
+      IF("${CMAKE_OSX_ARCHITECTURES}" STREQUAL "x86_64")
+        SET(MATLAB_ARCH_DIR "${MATLAB_ROOT}/bin/maci64")
+      ELSE("${CMAKE_OSX_ARCHITECTURES}" STREQUAL "x86_64")
+        MESSAGE(FATAL_ERROR "CMAKE_OSX_ARCHITECTURES must be set to i386 or x86_64")
+      ENDIF("${CMAKE_OSX_ARCHITECTURES}" STREQUAL "x86_64")
+    ENDIF("${CMAKE_OSX_ARCHITECTURES}" STREQUAL "i386")
+
+    SET(LOCATE_LIBRARIES
+      "MEX"
+      "MX"
+      "MAT"
+      "ENG"
+    )
+  ENDIF(APPLE)
+
+#---------------------------------------------
+
+  FOREACH(LIBRARY_FILE ${LOCATE_LIBRARIES})
+
+    STRING(TOLOWER "${LIBRARY_FILE}" TMP_NAME_LOWERCASE)
+
+    FIND_LIBRARY("MATLAB_${LIBRARY_FILE}_LIBRARY"
+      NAMES "${TMP_NAME_LOWERCASE}"
+      PATHS "${MATLAB_ARCH_DIR}"
+      NO_DEFAULT_PATH
+      NO_CMAKE_PATH
+      NO_CMAKE_ENVIRONMENT_PATH
+      NO_SYSTEM_ENVIRONMENT_PATH
+      NO_CMAKE_SYSTEM_PATH
+    )
+
+    IF(NOT "${MATLAB_${LIBRARY_FILE}_LIBRARY}" MATCHES "${MATLAB_ARCH_DIR}/.*")
+      ## For compensation of some Apple Intel Mac libraries not being properly found
+      SET("MATLAB_${LIBRARY_FILE}_LIBRARY" "MATLAB_${LIBRARY_FILE}_LIBRARY"-NOTFOUND)
+      FIND_LIBRARY("MATLAB_${LIBRARY_FILE}_LIBRARY"
+        NAMES "${TMP_NAME_LOWERCASE}"
+        PATHS "${MATLAB_ARCH_DIR}"
+        NO_DEFAULT_PATH
+        NO_CMAKE_PATH
+        NO_CMAKE_ENVIRONMENT_PATH
+        NO_SYSTEM_ENVIRONMENT_PATH
+        NO_CMAKE_SYSTEM_PATH
+      )
+
+    ENDIF(NOT "${MATLAB_${LIBRARY_FILE}_LIBRARY}" MATCHES "${MATLAB_ARCH_DIR}/.*")
+
+    MARK_AS_ADVANCED("${MATLAB_${LIBRARY_FILE}_LIBRARY}")
+    SET(MATLAB_LIBRARIES ${MATLAB_LIBRARIES} "${MATLAB_${LIBRARY_FILE}_LIBRARY}")
+
+  ENDFOREACH(LIBRARY_FILE ${LOCATE_LIBRARIES})
+
+#---------------------------------------------
+
+  FIND_PATH(MATLAB_INCLUDE_DIR "mex.h" "${MATLAB_ROOT}/extern/include")
+  FIND_PATH(SIMULINK_INCLUDE_DIR "simstruc.h" "${MATLAB_ROOT}/simulink/include")
+
+  MARK_AS_ADVANCED(
+    MATLAB_INCLUDE_DIR SIMULINK_INCLUDE_DIR
+    )
+
+  # Set MATLAB include directories
+  INCLUDE_DIRECTORIES(${MATLAB_INCLUDE_DIR} ${SIMULINK_INCLUDE_DIR})
+
+ENDMACRO(SIMVTK_FIND_MATLAB_LIBRARIES)

@@ -1,0 +1,17 @@
+#
+# This module is provided as SIMVTK_USE_FILE by SimvtkConfig.cmake.  It can
+# be 'INCLUDE'd in a project to load the needed directory
+# settings to use SimVTK.
+#
+
+IF(NOT SIMVTK_USE_FILE_INCLUDED)
+  SET(SIMVTK_USE_FILE_INCLUDED 1)
+  
+  SET(SIMVTK_SOURCE_DIR "@SIMVTK_SOURCE_DIR@")
+  SET(SIMVTK_BINARY_DIR "@SIMVTK_BINARY_DIR@")
+  SET(SIMVTK_WRAP_FILE "@SIMVTK_SOURCE_DIR@/CMake/SimvtkWrap.cmake")
+  SET(VTKXML_EXE "@SIMVTK_BINARY_DIR@/bin/vtkXML.exe")
+  
+  FILE(GLOB VTKXML_GEN_FILES "@SIMVTK_BINARY_DIR@/vtkXML/")
+  
+ENDIF(NOT SIMVTK_USE_FILE_INCLUDED)

@@ -1,0 +1,1762 @@
+Model {
+  Name			  "certus2"
+  Version		  7.1
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.53"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Fri Aug 08 12:59:45 2008"
+  Creator		  "acampi"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrator"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Sep 03 21:23:04 2008"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "1.%<AutoIncrement:53>"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.4.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.4.0"
+	  StartTime		  "0.0"
+	  StopTime		  "inf"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "0.2"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "VariableStepDiscrete"
+	  SolverName		  "VariableStepDiscrete"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Non-adaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.4.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.4.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.4.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.4.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.4.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferenceSigSizeVariationType "Always allowed"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.4.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.4.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.4.0"
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      AutosarCompliant	      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "certus2"
+    Location		    [5, 144, 793, 493]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Render Window"
+      Ports		      [1]
+      Position		      [630, 120, 730, 170]
+      BackgroundColor	      "[1.000000, 0.501961, 0.501961]"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Render Window"
+	Location		[397, 602, 890, 767]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Renderer"
+	  Position		  [290, 113, 320, 127]
+	  BackgroundColor	  "[1.000000, 0.501961, 0.501961]"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkInteractorStyleTrackballCamera"
+	  Ports			  [0, 1]
+	  Position		  [50, 20, 150, 70]
+	  BackgroundColor	  "[1.000000, 0.501961, 0.501961]"
+	  SourceBlock		  "SimvtkRenderingLibrary/vtkInteractorStyleTrackballCamera"
+	  SourceType		  ""
+	  VTKInputSelf		  off
+	  VTKInputCurrentRenderer off
+	  VTKInputDefaultRenderer off
+	  VTKInputInteractor	  off
+	  AutoAdjustCameraClippingRangeInputIndicator "Use Default"
+	  VTKParamAutoAdjustCameraClippingRange	"0"
+	  AutoAdjustCameraClippingRangeMaxValueInputIndicator off
+	  VTKParamAutoAdjustCameraClippingRangeMaxValue	"0"
+	  AutoAdjustCameraClippingRangeMinValueInputIndicator off
+	  VTKParamAutoAdjustCameraClippingRangeMinValue	"0"
+	  EnabledInputIndicator	  "Use Default"
+	  VTKParamEnabled	  "0"
+	  HandleObserversInputIndicator	"Use Default"
+	  VTKParamHandleObservers "0"
+	  KeyPressActivationInputIndicator "Use Default"
+	  VTKParamKeyPressActivation "0"
+	  KeyPressActivationValueInputIndicator	"Use Default"
+	  VTKParamKeyPressActivationValue "0"
+	  MotionFactorInputIndicator "Use Default"
+	  VTKParamMotionFactor	  "0"
+	  MouseWheelMotionFactorInputIndicator "Use Default"
+	  VTKParamMouseWheelMotionFactor "0"
+	  PickColorInputIndicator "Use Default"
+	  VTKParamPickColor	  "[0,0,0]"
+	  PriorityInputIndicator  "Use Default"
+	  VTKParamPriority	  "0"
+	  PriorityMaxValueInputIndicator off
+	  VTKParamPriorityMaxValue "0"
+	  PriorityMinValueInputIndicator off
+	  VTKParamPriorityMinValue "0"
+	  StateInputIndicator	  off
+	  VTKParamState		  "0"
+	  TimerDurationInputIndicator "Use Default"
+	  VTKParamTimerDuration	  "0"
+	  TimerDurationMaxValueInputIndicator off
+	  VTKParamTimerDurationMaxValue	"0"
+	  TimerDurationMinValueInputIndicator off
+	  VTKParamTimerDurationMinValue	"0"
+	  UseTimersInputIndicator "Use Default"
+	  VTKParamUseTimers	  "0"
+	  VTKOutputSelf		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkRenderWindow"
+	  Ports			  [2]
+	  Position		  [375, 32, 475, 83]
+	  BackgroundColor	  "[1.000000, 0.501961, 0.501961]"
+	  SourceBlock		  "SimvtkRenderingLibrary/vtkRenderWindow"
+	  SourceType		  ""
+	  VTKInputSelf		  off
+	  VTKInputInteractor	  on
+	  VTKInputRenderer	  "1"
+	  AAFramesInputIndicator  "Use Default"
+	  VTKParamAAFrames	  "0"
+	  AbortRenderInputIndicator "Use Default"
+	  VTKParamAbortRender	  "0"
+	  AlphaBitPlanesInputIndicator "Use Default"
+	  VTKParamAlphaBitPlanes  "0"
+	  AnaglyphColorMaskInputIndicator "Use Default"
+	  VTKParamAnaglyphColorMask "[0,0]"
+	  AnaglyphColorSaturationInputIndicator	"Use Default"
+	  VTKParamAnaglyphColorSaturation "0"
+	  AnaglyphColorSaturationMaxValueInputIndicator	off
+	  VTKParamAnaglyphColorSaturationMaxValue "0"
+	  AnaglyphColorSaturationMinValueInputIndicator	off
+	  VTKParamAnaglyphColorSaturationMinValue "0"
+	  BordersInputIndicator	  "Use Default"
+	  VTKParamBorders	  "0"
+	  CurrentCursorInputIndicator "Use Default"
+	  VTKParamCurrentCursor	  "0"
+	  CursorPositionInputIndicator "Use Default"
+	  VTKParamCursorPosition  "[0,0]"
+	  DPIInputIndicator	  "Use Default"
+	  VTKParamDPI		  "0"
+	  DPIMaxValueInputIndicator off
+	  VTKParamDPIMaxValue	  "0"
+	  DPIMinValueInputIndicator off
+	  VTKParamDPIMinValue	  "0"
+	  DepthBufferSizeInputIndicator	off
+	  VTKParamDepthBufferSize "0"
+	  DesiredUpdateRateInputIndicator "Use Default"
+	  VTKParamDesiredUpdateRate "0"
+	  DoubleBufferInputIndicator "Use Default"
+	  VTKParamDoubleBuffer	  "0"
+	  EraseInputIndicator	  "Use Default"
+	  VTKParamErase		  "0"
+	  EventPendingInputIndicator off
+	  VTKParamEventPending	  "0"
+	  FDFramesInputIndicator  "Use Default"
+	  VTKParamFDFrames	  "0"
+	  FullScreenInputIndicator "Use Default"
+	  VTKParamFullScreen	  "0"
+	  InAbortCheckInputIndicator "Use Default"
+	  VTKParamInAbortCheck	  "0"
+	  IsPickingInputIndicator "Use Default"
+	  VTKParamIsPicking	  "0"
+	  LastGraphicErrorStringInputIndicator off
+	  VTKParamLastGraphicErrorString "0"
+	  LineSmoothingInputIndicator "Use Default"
+	  VTKParamLineSmoothing	  "0"
+	  MappedInputIndicator	  "Use Default"
+	  VTKParamMapped	  "0"
+	  MultiSamplesInputIndicator "Use Default"
+	  VTKParamMultiSamples	  "0"
+	  NeverRenderedInputIndicator off
+	  VTKParamNeverRendered	  "0"
+	  NextWindowInfoInputIndicator "Use Default"
+	  VTKParamNextWindowInfo  "0"
+	  NumberOfLayersInputIndicator "Use Default"
+	  VTKParamNumberOfLayers  "0"
+	  NumberOfLayersMaxValueInputIndicator off
+	  VTKParamNumberOfLayersMaxValue "0"
+	  NumberOfLayersMinValueInputIndicator off
+	  VTKParamNumberOfLayersMinValue "0"
+	  OffScreenRenderingInputIndicator "Use Default"
+	  VTKParamOffScreenRendering "0"
+	  ParentInfoInputIndicator "Use Default"
+	  VTKParamParentInfo	  "0"
+	  PointSmoothingInputIndicator "Use Default"
+	  VTKParamPointSmoothing  "0"
+	  PolygonSmoothingInputIndicator "Use Default"
+	  VTKParamPolygonSmoothing "0"
+	  PositionInputIndicator  "Use Default"
+	  VTKParamPosition	  "[0,0]"
+	  RenderLibraryInputIndicator off
+	  VTKParamRenderLibrary	  "0"
+	  ReportGraphicErrorsInputIndicator "Use Default"
+	  VTKParamReportGraphicErrors "0"
+	  SizeInputIndicator	  "Use Default"
+	  VTKParamSize		  "[0,0]"
+	  StencilCapableInputIndicator "Use Default"
+	  VTKParamStencilCapable  "0"
+	  StereoCapableWindowInputIndicator "Use Default"
+	  VTKParamStereoCapableWindow "0"
+	  StereoRenderInputIndicator "Use Default"
+	  VTKParamStereoRender	  "0"
+	  StereoTypeInputIndicator "Use Default"
+	  VTKParamStereoType	  "0"
+	  StereoTypeAsStringInputIndicator off
+	  VTKParamStereoTypeAsString "0"
+	  SubFramesInputIndicator "Use Default"
+	  VTKParamSubFrames	  "0"
+	  SwapBuffersInputIndicator "Use Default"
+	  VTKParamSwapBuffers	  "0"
+	  TileScaleInputIndicator "Use Default"
+	  VTKParamTileScale	  "[0,0]"
+	  TileViewportInputIndicator "Use Default"
+	  VTKParamTileViewport	  "[0,0,0,0]"
+	  WindowInfoInputIndicator "Use Default"
+	  VTKParamWindowInfo	  "0"
+	  WindowNameInputIndicator "Use Default"
+	  VTKParamWindowName	  "0"
+	  VTKOutputSelf		  off
+	  VTKOutputPainterDeviceAdapter	off
+	  VTKOutputRenderers	  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkRenderWindowInteractor"
+	  Ports			  [1, 1]
+	  Position		  [215, 20, 315, 70]
+	  BackgroundColor	  "[1.000000, 0.501961, 0.501961]"
+	  SourceBlock		  "SimvtkRenderingLibrary/vtkRenderWindowInteractor"
+	  SourceType		  ""
+	  VTKInputSelf		  off
+	  VTKInputInteractorStyle on
+	  VTKInputPicker	  off
+	  VTKInputRenderWindow	  off
+	  AltKeyInputIndicator	  "Use Default"
+	  VTKParamAltKey	  "0"
+	  ControlKeyInputIndicator "Use Default"
+	  VTKParamControlKey	  "0"
+	  DesiredUpdateRateInputIndicator "Use Default"
+	  VTKParamDesiredUpdateRate "0"
+	  DesiredUpdateRateMaxValueInputIndicator off
+	  VTKParamDesiredUpdateRateMaxValue "0"
+	  DesiredUpdateRateMinValueInputIndicator off
+	  VTKParamDesiredUpdateRateMinValue "0"
+	  DollyInputIndicator	  "Use Default"
+	  VTKParamDolly		  "0"
+	  EnabledInputIndicator	  off
+	  VTKParamEnabled	  "0"
+	  EventPositionInputIndicator "Use Default"
+	  VTKParamEventPosition	  "[0,0]"
+	  EventPositionFlipYInputIndicator "Use Default"
+	  VTKParamEventPositionFlipY "[0,0]"
+	  EventSizeInputIndicator "Use Default"
+	  VTKParamEventSize	  "[0,0]"
+	  InitializedInputIndicator off
+	  VTKParamInitialized	  "0"
+	  KeyCodeInputIndicator	  "Use Default"
+	  VTKParamKeyCode	  "0"
+	  KeySymInputIndicator	  "Use Default"
+	  VTKParamKeySym	  "0"
+	  LastEventPositionInputIndicator "Use Default"
+	  VTKParamLastEventPosition "[0,0]"
+	  LightFollowCameraInputIndicator "Use Default"
+	  VTKParamLightFollowCamera "0"
+	  NumberOfFlyFramesInputIndicator "Use Default"
+	  VTKParamNumberOfFlyFrames "0"
+	  NumberOfFlyFramesMaxValueInputIndicator off
+	  VTKParamNumberOfFlyFramesMaxValue "0"
+	  NumberOfFlyFramesMinValueInputIndicator off
+	  VTKParamNumberOfFlyFramesMinValue "0"
+	  RepeatCountInputIndicator "Use Default"
+	  VTKParamRepeatCount	  "0"
+	  ShiftKeyInputIndicator  "Use Default"
+	  VTKParamShiftKey	  "0"
+	  SizeInputIndicator	  "Use Default"
+	  VTKParamSize		  "[0,0]"
+	  StillUpdateRateInputIndicator	"Use Default"
+	  VTKParamStillUpdateRate "0"
+	  StillUpdateRateMaxValueInputIndicator	off
+	  VTKParamStillUpdateRateMaxValue "0"
+	  StillUpdateRateMinValueInputIndicator	off
+	  VTKParamStillUpdateRateMinValue "0"
+	  TimerDurationInputIndicator "Use Default"
+	  VTKParamTimerDuration	  "0"
+	  TimerDurationMaxValueInputIndicator off
+	  VTKParamTimerDurationMaxValue	"0"
+	  TimerDurationMinValueInputIndicator off
+	  VTKParamTimerDurationMinValue	"0"
+	  TimerEventDurationInputIndicator "Use Default"
+	  VTKParamTimerEventDuration "0"
+	  TimerEventIdInputIndicator "Use Default"
+	  VTKParamTimerEventId	  "0"
+	  TimerEventPlatformIdInputIndicator "Use Default"
+	  VTKParamTimerEventPlatformId "0"
+	  TimerEventTypeInputIndicator "Use Default"
+	  VTKParamTimerEventType  "0"
+	  VTKOutputSelf		  on
+	  VTKOutputObserverMediator off
+	}
+	Line {
+	  SrcBlock		  "vtkRenderWindowInteractor"
+	  SrcPort		  1
+	  DstBlock		  "vtkRenderWindow"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "vtkInteractorStyleTrackballCamera"
+	  SrcPort		  1
+	  DstBlock		  "vtkRenderWindowInteractor"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Renderer"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -50]
+	  DstBlock		  "vtkRenderWindow"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Stylus Actor"
+      Ports		      [1, 1]
+      Position		      [345, 104, 445, 156]
+      BackgroundColor	      "[1.000000, 1.000000, 0.501961]"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Stylus Actor"
+	Location		[196, 416, 883, 661]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "UserTransform"
+	  Position		  [45, 108, 75, 122]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkActor"
+	  Ports			  [2, 1]
+	  Position		  [370, 56, 470, 109]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  SourceBlock		  "SimvtkRenderingLibrary/vtkActor"
+	  SourceType		  ""
+	  VTKInputSelf		  off
+	  VTKInputBackfaceProperty off
+	  VTKInputMapper	  on
+	  VTKInputProperty	  off
+	  VTKInputTexture	  off
+	  VTKInputUserMatrix	  off
+	  VTKInputUserTransform	  on
+	  DragableInputIndicator  "Use Default"
+	  VTKParamDragable	  "0"
+	  IsIdentityInputIndicator off
+	  VTKParamIsIdentity	  "0"
+	  LengthInputIndicator	  off
+	  VTKParamLength	  "0"
+	  NumberOfPartsInputIndicator off
+	  VTKParamNumberOfParts	  "0"
+	  NumberOfPathsInputIndicator off
+	  VTKParamNumberOfPaths	  "0"
+	  OrientationInputIndicator "Use Default"
+	  VTKParamOrientation	  "[0,0,0]"
+	  OriginInputIndicator	  "Use Default"
+	  VTKParamOrigin	  "[0,0,0]"
+	  PickableInputIndicator  "Use Default"
+	  VTKParamPickable	  "0"
+	  PositionInputIndicator  "Use Default"
+	  VTKParamPosition	  "[0,0,0]"
+	  RedrawMTimeInputIndicator off
+	  VTKParamRedrawMTime	  "0"
+	  ScaleInputIndicator	  "Use Default"
+	  VTKParamScale		  "[0,0,0]"
+	  UserTransformMatrixMTimeInputIndicator off
+	  VTKParamUserTransformMatrixMTime "0"
+	  VisibilityInputIndicator "Use Default"
+	  VTKParamVisibility	  "0"
+	  VTKOutputSelf		  on
+	  VTKOutputMatrix	  off
+	  VTKOutputNextPart	  off
+	  VTKOutputNextPath	  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkActor1"
+	  Ports			  [2, 1]
+	  Position		  [370, 141, 470, 194]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  SourceBlock		  "SimvtkRenderingLibrary/vtkActor"
+	  SourceType		  ""
+	  VTKInputSelf		  off
+	  VTKInputBackfaceProperty off
+	  VTKInputMapper	  on
+	  VTKInputProperty	  off
+	  VTKInputTexture	  off
+	  VTKInputUserMatrix	  off
+	  VTKInputUserTransform	  on
+	  DragableInputIndicator  "Use Default"
+	  VTKParamDragable	  "0"
+	  IsIdentityInputIndicator off
+	  VTKParamIsIdentity	  "0"
+	  LengthInputIndicator	  off
+	  VTKParamLength	  "0"
+	  NumberOfPartsInputIndicator off
+	  VTKParamNumberOfParts	  "0"
+	  NumberOfPathsInputIndicator off
+	  VTKParamNumberOfPaths	  "0"
+	  OrientationInputIndicator "As Parameter"
+	  VTKParamOrientation	  "[0,0,90]"
+	  OriginInputIndicator	  "As Parameter"
+	  VTKParamOrigin	  "[0,0,0]"
+	  PickableInputIndicator  "Use Default"
+	  VTKParamPickable	  "0"
+	  PositionInputIndicator  "Use Default"
+	  VTKParamPosition	  "[0,0,0]"
+	  RedrawMTimeInputIndicator off
+	  VTKParamRedrawMTime	  "0"
+	  ScaleInputIndicator	  "Use Default"
+	  VTKParamScale		  "[0,0,0]"
+	  UserTransformMatrixMTimeInputIndicator off
+	  VTKParamUserTransformMatrixMTime "0"
+	  VisibilityInputIndicator "Use Default"
+	  VTKParamVisibility	  "0"
+	  VTKOutputSelf		  on
+	  VTKOutputMatrix	  off
+	  VTKOutputNextPart	  off
+	  VTKOutputNextPath	  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkAssembly"
+	  Ports			  [2, 1]
+	  Position		  [510, 107, 610, 158]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  SourceBlock		  "SimvtkRenderingLibrary/vtkAssembly"
+	  SourceType		  ""
+	  VTKInputSelf		  off
+	  VTKInputPart		  "2"
+	  VTKInputUserMatrix	  off
+	  VTKInputUserTransform	  off
+	  DragableInputIndicator  "Use Default"
+	  VTKParamDragable	  "0"
+	  IsIdentityInputIndicator off
+	  VTKParamIsIdentity	  "0"
+	  LengthInputIndicator	  off
+	  VTKParamLength	  "0"
+	  NumberOfPathsInputIndicator off
+	  VTKParamNumberOfPaths	  "0"
+	  OrientationInputIndicator "Use Default"
+	  VTKParamOrientation	  "[0,0,0]"
+	  OriginInputIndicator	  "Use Default"
+	  VTKParamOrigin	  "[0,0,0]"
+	  PickableInputIndicator  "Use Default"
+	  VTKParamPickable	  "0"
+	  PositionInputIndicator  "Use Default"
+	  VTKParamPosition	  "[0,0,0]"
+	  RedrawMTimeInputIndicator off
+	  VTKParamRedrawMTime	  "0"
+	  ScaleInputIndicator	  "Use Default"
+	  VTKParamScale		  "[0,0,0]"
+	  UserTransformMatrixMTimeInputIndicator off
+	  VTKParamUserTransformMatrixMTime "0"
+	  VisibilityInputIndicator "Use Default"
+	  VTKParamVisibility	  "0"
+	  VTKOutputSelf		  on
+	  VTKOutputMatrix	  off
+	  VTKOutputNextPath	  off
+	  VTKOutputParts	  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkConeSource"
+	  Ports			  [0, 1]
+	  Position		  [115, 48, 215, 92]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  SourceBlock		  "SimvtkGraphicsLibrary/vtkConeSource"
+	  SourceType		  ""
+	  VTKInputSelf		  off
+	  AngleInputIndicator	  "Use Default"
+	  VTKParamAngle		  "0"
+	  CappingInputIndicator	  "Use Default"
+	  VTKParamCapping	  "0"
+	  CenterInputIndicator	  "As Parameter"
+	  VTKParamCenter	  "[-5,0,0]"
+	  DirectionInputIndicator "As Parameter"
+	  VTKParamDirection	  "[1,0,0]"
+	  HeightInputIndicator	  "As Parameter"
+	  VTKParamHeight	  "10"
+	  HeightMaxValueInputIndicator off
+	  VTKParamHeightMaxValue  "0"
+	  HeightMinValueInputIndicator off
+	  VTKParamHeightMinValue  "0"
+	  RadiusInputIndicator	  "As Parameter"
+	  VTKParamRadius	  "2"
+	  RadiusMaxValueInputIndicator off
+	  VTKParamRadiusMaxValue  "0"
+	  RadiusMinValueInputIndicator off
+	  VTKParamRadiusMinValue  "0"
+	  ResolutionInputIndicator "Use Default"
+	  VTKParamResolution	  "0"
+	  ResolutionMaxValueInputIndicator off
+	  VTKParamResolutionMaxValue "0"
+	  ResolutionMinValueInputIndicator off
+	  VTKParamResolutionMinValue "0"
+	  VTKOutputSelf		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkCylinderSource"
+	  Ports			  [0, 1]
+	  Position		  [115, 130, 215, 180]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  SourceBlock		  "SimvtkGraphicsLibrary/vtkCylinderSource"
+	  SourceType		  ""
+	  VTKInputSelf		  off
+	  CappingInputIndicator	  "As Parameter"
+	  VTKParamCapping	  "1"
+	  CenterInputIndicator	  "As Parameter"
+	  VTKParamCenter	  "[0,60,0]"
+	  HeightInputIndicator	  "As Parameter"
+	  VTKParamHeight	  "100"
+	  HeightMaxValueInputIndicator off
+	  VTKParamHeightMaxValue  "0"
+	  HeightMinValueInputIndicator off
+	  VTKParamHeightMinValue  "0"
+	  RadiusInputIndicator	  "As Parameter"
+	  VTKParamRadius	  "2"
+	  RadiusMaxValueInputIndicator off
+	  VTKParamRadiusMaxValue  "0"
+	  RadiusMinValueInputIndicator off
+	  VTKParamRadiusMinValue  "0"
+	  ResolutionInputIndicator "Use Default"
+	  VTKParamResolution	  "0"
+	  ResolutionMaxValueInputIndicator off
+	  VTKParamResolutionMaxValue "0"
+	  ResolutionMinValueInputIndicator off
+	  VTKParamResolutionMinValue "0"
+	  VTKOutputSelf		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkPolyDataMapper"
+	  Ports			  [1, 1]
+	  Position		  [245, 47, 345, 93]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  SourceBlock		  "SimvtkRenderingLibrary/vtkPolyDataMapper"
+	  SourceType		  ""
+	  VTKInputSelf		  off
+	  VTKInputClippingPlane	  "0"
+	  VTKInputClippingPlanes  off
+	  VTKInputLookupTable	  off
+	  ArrayAccessModeInputIndicator	off
+	  VTKParamArrayAccessMode "0"
+	  ArrayComponentInputIndicator off
+	  VTKParamArrayComponent  "0"
+	  ArrayIdInputIndicator	  off
+	  VTKParamArrayId	  "0"
+	  ArrayNameInputIndicator off
+	  VTKParamArrayName	  "0"
+	  ColorModeInputIndicator "Use Default"
+	  VTKParamColorMode	  "0"
+	  ColorModeAsStringInputIndicator off
+	  VTKParamColorModeAsString "0"
+	  GhostLevelInputIndicator "Use Default"
+	  VTKParamGhostLevel	  "0"
+	  ImmediateModeRenderingInputIndicator "Use Default"
+	  VTKParamImmediateModeRendering "0"
+	  InterpolateScalarsBeforeMappingInputIndicator	"Use Default"
+	  VTKParamInterpolateScalarsBeforeMapping "0"
+	  LengthInputIndicator	  off
+	  VTKParamLength	  "0"
+	  NumberOfPiecesInputIndicator "Use Default"
+	  VTKParamNumberOfPieces  "0"
+	  NumberOfSubPiecesInputIndicator "Use Default"
+	  VTKParamNumberOfSubPieces "0"
+	  PieceInputIndicator	  "Use Default"
+	  VTKParamPiece		  "0"
+	  RenderTimeInputIndicator "Use Default"
+	  VTKParamRenderTime	  "0"
+	  ScalarMaterialModeInputIndicator "Use Default"
+	  VTKParamScalarMaterialMode "0"
+	  ScalarMaterialModeAsStringInputIndicator off
+	  VTKParamScalarMaterialModeAsString "0"
+	  ScalarModeInputIndicator "Use Default"
+	  VTKParamScalarMode	  "0"
+	  ScalarModeAsStringInputIndicator off
+	  VTKParamScalarModeAsString "0"
+	  ScalarRangeInputIndicator "Use Default"
+	  VTKParamScalarRange	  "[0,0]"
+	  ScalarVisibilityInputIndicator "Use Default"
+	  VTKParamScalarVisibility "0"
+	  StaticInputIndicator	  "Use Default"
+	  VTKParamStatic	  "0"
+	  TimeToDrawInputIndicator off
+	  VTKParamTimeToDraw	  "0"
+	  UseLookupTableScalarRangeInputIndicator "Use Default"
+	  VTKParamUseLookupTableScalarRange "0"
+	  VTKOutputSelf		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkPolyDataMapper1"
+	  Ports			  [1, 1]
+	  Position		  [245, 132, 345, 178]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  SourceBlock		  "SimvtkRenderingLibrary/vtkPolyDataMapper"
+	  SourceType		  ""
+	  VTKInputSelf		  off
+	  VTKInputClippingPlane	  "0"
+	  VTKInputClippingPlanes  off
+	  VTKInputLookupTable	  off
+	  ArrayAccessModeInputIndicator	off
+	  VTKParamArrayAccessMode "0"
+	  ArrayComponentInputIndicator off
+	  VTKParamArrayComponent  "0"
+	  ArrayIdInputIndicator	  off
+	  VTKParamArrayId	  "0"
+	  ArrayNameInputIndicator off
+	  VTKParamArrayName	  "0"
+	  ColorModeInputIndicator "Use Default"
+	  VTKParamColorMode	  "0"
+	  ColorModeAsStringInputIndicator off
+	  VTKParamColorModeAsString "0"
+	  GhostLevelInputIndicator "Use Default"
+	  VTKParamGhostLevel	  "0"
+	  ImmediateModeRenderingInputIndicator "Use Default"
+	  VTKParamImmediateModeRendering "0"
+	  InterpolateScalarsBeforeMappingInputIndicator	"Use Default"
+	  VTKParamInterpolateScalarsBeforeMapping "0"
+	  LengthInputIndicator	  off
+	  VTKParamLength	  "0"
+	  NumberOfPiecesInputIndicator "Use Default"
+	  VTKParamNumberOfPieces  "0"
+	  NumberOfSubPiecesInputIndicator "Use Default"
+	  VTKParamNumberOfSubPieces "0"
+	  PieceInputIndicator	  "Use Default"
+	  VTKParamPiece		  "0"
+	  RenderTimeInputIndicator "Use Default"
+	  VTKParamRenderTime	  "0"
+	  ScalarMaterialModeInputIndicator "Use Default"
+	  VTKParamScalarMaterialMode "0"
+	  ScalarMaterialModeAsStringInputIndicator off
+	  VTKParamScalarMaterialModeAsString "0"
+	  ScalarModeInputIndicator "Use Default"
+	  VTKParamScalarMode	  "0"
+	  ScalarModeAsStringInputIndicator off
+	  VTKParamScalarModeAsString "0"
+	  ScalarRangeInputIndicator "Use Default"
+	  VTKParamScalarRange	  "[0,0]"
+	  ScalarVisibilityInputIndicator "Use Default"
+	  VTKParamScalarVisibility "0"
+	  StaticInputIndicator	  "Use Default"
+	  VTKParamStatic	  "0"
+	  TimeToDrawInputIndicator off
+	  VTKParamTimeToDraw	  "0"
+	  UseLookupTableScalarRangeInputIndicator "Use Default"
+	  VTKParamUseLookupTableScalarRange "0"
+	  VTKOutputSelf		  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Self"
+	  Position		  [635, 128, 665, 142]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "vtkConeSource"
+	  SrcPort		  1
+	  DstBlock		  "vtkPolyDataMapper"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "vtkPolyDataMapper"
+	  SrcPort		  1
+	  DstBlock		  "vtkActor"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "UserTransform"
+	  SrcPort		  1
+	  Points		  [275, 0]
+	  Branch {
+	    DstBlock		    "vtkActor"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "vtkActor1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "vtkAssembly"
+	  SrcPort		  1
+	  DstBlock		  "Self"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "vtkCylinderSource"
+	  SrcPort		  1
+	  DstBlock		  "vtkPolyDataMapper1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "vtkPolyDataMapper1"
+	  SrcPort		  1
+	  DstBlock		  "vtkActor1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "vtkActor"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 35]
+	  DstBlock		  "vtkAssembly"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "vtkActor1"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -25]
+	  DstBlock		  "vtkAssembly"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Stylus Tool"
+      Ports		      [1, 1]
+      Position		      [205, 104, 305, 156]
+      BackgroundColor	      "[1.000000, 1.000000, 0.501961]"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Stylus Tool"
+	Location		[243, 544, 701, 715]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Self"
+	  Position		  [145, 38, 175, 52]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [25, 90, 55, 120]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  Value			  "[1,0,0,209.8;0,1,0,-0.6;0,0,1,0;0,0,0,1]"
+	  VectorParams1D	  off
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkMatrix4x4FromMatlabMatrix"
+	  Ports			  [1, 1]
+	  Position		  [80, 77, 205, 133]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  SourceBlock		  "SimvtkCommonLibrary/vtkMatrix4x4FromMatlabMatrix"
+	  SourceType		  ""
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vtkTrackerTool"
+	  Ports			  [2, 1]
+	  Position		  [240, 30, 340, 90]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  SourceBlock		  "SimvtkOpenIGTLibrary/vtkTrackerTool"
+	  SourceType		  ""
+	  VTKInputSelf		  on
+	  VTKInputCalibrationMatrix on
+	  FlagsInputIndicator	  off
+	  VTKParamFlags		  "0"
+	  LED1InputIndicator	  "Use Default"
+	  VTKParamLED1		  "0"
+	  LED2InputIndicator	  "Use Default"
+	  VTKParamLED2		  "0"
+	  LED3InputIndicator	  "Use Default"
+	  VTKParamLED3		  "0"
+	  TimeStampInputIndicator off
+	  VTKParamTimeStamp	  "0"
+	  ToolManufacturerInputIndicator off
+	  VTKParamToolManufacturer "0"
+	  ToolPartNumberInputIndicator off
+	  VTKParamToolPartNumber  "0"
+	  ToolPortInputIndicator  off
+	  VTKParamToolPort	  "0"
+	  ToolRevisionInputIndicator off
+	  VTKParamToolRevision	  "0"
+	  ToolSerialNumberInputIndicator off
+	  VTKParamToolSerialNumber "0"
+	  ToolTypeInputIndicator  off
+	  VTKParamToolType	  "0"
+	  VTKOutputSelf		  off
+	  VTKOutputBuffer	  off
+	  VTKOutputTracker	  off
+	  VTKOutputTransform	  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Transform"
+	  Position		  [395, 53, 425, 67]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.501961]"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "vtkMatrix4x4FromMatlabMatrix"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "vtkMatrix4x4FromMatlabMatrix"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "vtkTrackerTool"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Self"
+	  SrcPort		  1
+	  DstBlock		  "vtkTrackerTool"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "vtkTrackerTool"
+	  SrcPort		  1
+	  DstBlock		  "Transform"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "vtkAxesActor"
+      Ports		      [0, 1]
+      Position		      [345, 194, 445, 246]
+      BackgroundColor	      "[0.501961, 0.501961, 1.000000]"
+      SourceBlock	      "SimvtkHybridLibrary/vtkAxesActor"
+      SourceType	      ""
+      VTKInputSelf	      off
+      VTKInputUserDefinedShaft off
+      VTKInputUserDefinedTip  off
+      VTKInputUserMatrix      off
+      VTKInputUserTransform   off
+      AxisLabelsInputIndicator "Use Default"
+      VTKParamAxisLabels      "0"
+      ConeRadiusInputIndicator "Use Default"
+      VTKParamConeRadius      "0"
+      ConeRadiusMaxValueInputIndicator off
+      VTKParamConeRadiusMaxValue "0"
+      ConeRadiusMinValueInputIndicator off
+      VTKParamConeRadiusMinValue "0"
+      ConeResolutionInputIndicator "Use Default"
+      VTKParamConeResolution  "0"
+      ConeResolutionMaxValueInputIndicator off
+      VTKParamConeResolutionMaxValue "0"
+      ConeResolutionMinValueInputIndicator off
+      VTKParamConeResolutionMinValue "0"
+      CylinderRadiusInputIndicator "Use Default"
+      VTKParamCylinderRadius  "0"
+      CylinderRadiusMaxValueInputIndicator off
+      VTKParamCylinderRadiusMaxValue "0"
+      CylinderRadiusMinValueInputIndicator off
+      VTKParamCylinderRadiusMinValue "0"
+      CylinderResolutionInputIndicator "Use Default"
+      VTKParamCylinderResolution "0"
+      CylinderResolutionMaxValueInputIndicator off
+      VTKParamCylinderResolutionMaxValue "0"
+      CylinderResolutionMinValueInputIndicator off
+      VTKParamCylinderResolutionMinValue "0"
+      DragableInputIndicator  "Use Default"
+      VTKParamDragable	      "0"
+      IsIdentityInputIndicator off
+      VTKParamIsIdentity      "0"
+      LengthInputIndicator    off
+      VTKParamLength	      "0"
+      NormalizedLabelPositionInputIndicator "Use Default"
+      VTKParamNormalizedLabelPosition "[0,0,0]"
+      NormalizedShaftLengthInputIndicator "Use Default"
+      VTKParamNormalizedShaftLength "[50,50,50]"
+      NormalizedTipLengthInputIndicator	"Use Default"
+      VTKParamNormalizedTipLength "[0,0,0]"
+      NumberOfPathsInputIndicator off
+      VTKParamNumberOfPaths   "0"
+      OrientationInputIndicator	"Use Default"
+      VTKParamOrientation     "[0,0,0]"
+      OriginInputIndicator    "Use Default"
+      VTKParamOrigin	      "[0,0,0]"
+      PickableInputIndicator  "Use Default"
+      VTKParamPickable	      "0"
+      PositionInputIndicator  "Use Default"
+      VTKParamPosition	      "[0,0,0]"
+      RedrawMTimeInputIndicator	off
+      VTKParamRedrawMTime     "0"
+      ScaleInputIndicator     "Use Default"
+      VTKParamScale	      "[0,0,0]"
+      ShaftTypeInputIndicator "Use Default"
+      VTKParamShaftType	      "0"
+      SphereRadiusInputIndicator "Use Default"
+      VTKParamSphereRadius    "0"
+      SphereRadiusMaxValueInputIndicator off
+      VTKParamSphereRadiusMaxValue "0"
+      SphereRadiusMinValueInputIndicator off
+      VTKParamSphereRadiusMinValue "0"
+      SphereResolutionInputIndicator "Use Default"
+      VTKParamSphereResolution "0"
+      SphereResolutionMaxValueInputIndicator off
+      VTKParamSphereResolutionMaxValue "0"
+      SphereResolutionMinValueInputIndicator off
+      VTKParamSphereResolutionMinValue "0"
+      TipTypeInputIndicator   "Use Default"
+      VTKParamTipType	      "0"
+      TotalLengthInputIndicator	"As Parameter"
+      VTKParamTotalLength     "[100,100,100]"
+      UserTransformMatrixMTimeInputIndicator off
+      VTKParamUserTransformMatrixMTime "0"
+      VisibilityInputIndicator "Use Default"
+      VTKParamVisibility      "0"
+      XAxisLabelTextInputIndicator "Use Default"
+      VTKParamXAxisLabelText  "0"
+      YAxisLabelTextInputIndicator "Use Default"
+      VTKParamYAxisLabelText  "0"
+      ZAxisLabelTextInputIndicator "Use Default"
+      VTKParamZAxisLabelText  "0"
+      VTKOutputSelf	      on
+      VTKOutputMatrix	      off
+      VTKOutputNextPath	      off
+      VTKOutputXAxisCaptionActor2D off
+      VTKOutputXAxisShaftProperty off
+      VTKOutputXAxisTipProperty	off
+      VTKOutputYAxisCaptionActor2D off
+      VTKOutputYAxisShaftProperty off
+      VTKOutputYAxisTipProperty	off
+      VTKOutputZAxisCaptionActor2D off
+      VTKOutputZAxisShaftProperty off
+      VTKOutputZAxisTipProperty	off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "vtkNDICertusTracker"
+      Ports		      [0, 1]
+      Position		      [65, 104, 165, 156]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "SimvtkOpenIGTLibrary/vtkNDICertusTracker"
+      SourceType	      ""
+      VTKInputSelf	      off
+      VTKInputTool	      off
+      VTKInputWorldCalibrationMatrix off
+      InternalUpdateRateInputIndicator off
+      VTKParamInternalUpdateRate "0"
+      NetworkPortInputIndicator	"Use Default"
+      VTKParamNetworkPort     "0"
+      NumberOfToolsInputIndicator off
+      VTKParamNumberOfTools   "0"
+      ReferenceToolInputIndicator "As Parameter"
+      VTKParamReferenceTool   "1"
+      RemoteAddressInputIndicator "Use Default"
+      VTKParamRemoteAddress   "0"
+      ServerModeInputIndicator "Use Default"
+      VTKParamServerMode      "0"
+      ToolLEDInputIndicator   "Use Default"
+      VTKParamToolLED	      "[0,0,0]"
+      TrackingInputIndicator  "As Parameter"
+      VTKParamTracking	      "1"
+      UpdateTimeStampInputIndicator off
+      VTKParamUpdateTimeStamp "0"
+      VTKOutputSelf	      off
+      VTKOutputSocketCommunicator off
+      VTKOutputTool0	      on
+      VTKOutputTool1	      off
+      VTKOutputTool2	      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "vtkRenderer"
+      Ports		      [2, 1]
+      Position		      [490, 116, 590, 169]
+      BackgroundColor	      "[1.000000, 0.501961, 0.501961]"
+      SourceBlock	      "SimvtkRenderingLibrary/vtkRenderer"
+      SourceType	      ""
+      VTKInputSelf	      off
+      VTKInputActiveCamera    off
+      VTKInputActor	      "2"
+      VTKInputActor2D	      "0"
+      VTKInputCuller	      "0"
+      VTKInputLight	      "0"
+      VTKInputProp	      "0"
+      VTKInputViewProp	      "0"
+      VTKInputVolume	      "0"
+      AllocatedRenderTimeInputIndicator	"Use Default"
+      VTKParamAllocatedRenderTime "0"
+      AmbientInputIndicator   "Use Default"
+      VTKParamAmbient	      "[0,0,0]"
+      AspectInputIndicator    "Use Default"
+      VTKParamAspect	      "[0,0]"
+      AutomaticLightCreationInputIndicator "Use Default"
+      VTKParamAutomaticLightCreation "0"
+      BackgroundInputIndicator "Use Default"
+      VTKParamBackground      "[0,0,0]"
+      Background2InputIndicator	"Use Default"
+      VTKParamBackground2     "[0,0,0]"
+      BackingStoreInputIndicator "Use Default"
+      VTKParamBackingStore    "0"
+      DisplayPointInputIndicator "Use Default"
+      VTKParamDisplayPoint    "[0,0,0]"
+      DrawInputIndicator      "Use Default"
+      VTKParamDraw	      "0"
+      EraseInputIndicator     "Use Default"
+      VTKParamErase	      "0"
+      GradientBackgroundInputIndicator "Use Default"
+      VTKParamGradientBackground "0"
+      InteractiveInputIndicator	"Use Default"
+      VTKParamInteractive     "0"
+      IsPickingInputIndicator off
+      VTKParamIsPicking	      "0"
+      LastRenderTimeInSecondsInputIndicator off
+      VTKParamLastRenderTimeInSeconds "0"
+      LastRenderingUsedDepthPeelingInputIndicator off
+      VTKParamLastRenderingUsedDepthPeeling "0"
+      LayerInputIndicator     "Use Default"
+      VTKParamLayer	      "0"
+      LightFollowCameraInputIndicator "Use Default"
+      VTKParamLightFollowCamera	"0"
+      MaximumNumberOfPeelsInputIndicator "Use Default"
+      VTKParamMaximumNumberOfPeels "0"
+      NearClippingPlaneToleranceInputIndicator "Use Default"
+      VTKParamNearClippingPlaneTolerance "0"
+      NearClippingPlaneToleranceMaxValueInputIndicator off
+      VTKParamNearClippingPlaneToleranceMaxValue "0"
+      NearClippingPlaneToleranceMinValueInputIndicator off
+      VTKParamNearClippingPlaneToleranceMinValue "0"
+      NumberOfPropsRenderedInputIndicator off
+      VTKParamNumberOfPropsRendered "0"
+      OcclusionRatioInputIndicator "Use Default"
+      VTKParamOcclusionRatio  "0"
+      OcclusionRatioMaxValueInputIndicator off
+      VTKParamOcclusionRatioMaxValue "0"
+      OcclusionRatioMinValueInputIndicator off
+      VTKParamOcclusionRatioMinValue "0"
+      PickHeightInputIndicator off
+      VTKParamPickHeight      "0"
+      PickWidthInputIndicator off
+      VTKParamPickWidth	      "0"
+      PickXInputIndicator     off
+      VTKParamPickX	      "0"
+      PickX1InputIndicator    off
+      VTKParamPickX1	      "0"
+      PickX2InputIndicator    off
+      VTKParamPickX2	      "0"
+      PickYInputIndicator     off
+      VTKParamPickY	      "0"
+      PickY1InputIndicator    off
+      VTKParamPickY1	      "0"
+      PickY2InputIndicator    off
+      VTKParamPickY2	      "0"
+      PickedZInputIndicator   off
+      VTKParamPickedZ	      "0"
+      PixelAspectInputIndicator	"Use Default"
+      VTKParamPixelAspect     "[0,0]"
+      TiledAspectRatioInputIndicator off
+      VTKParamTiledAspectRatio "0"
+      TimeFactorInputIndicator off
+      VTKParamTimeFactor      "0"
+      TwoSidedLightingInputIndicator "Use Default"
+      VTKParamTwoSidedLighting "0"
+      UseDepthPeelingInputIndicator "Use Default"
+      VTKParamUseDepthPeeling "0"
+      ViewPointInputIndicator "Use Default"
+      VTKParamViewPoint	      "[0,0,0]"
+      ViewportInputIndicator  "Use Default"
+      VTKParamViewport	      "[0,0,0,0]"
+      WorldPointInputIndicator "Use Default"
+      VTKParamWorldPoint      "[0,0,0,0]"
+      VTKOutputSelf	      on
+      VTKOutputActors	      off
+      VTKOutputActors2D	      off
+      VTKOutputCullers	      off
+      VTKOutputLights	      off
+      VTKOutputPickResultProps off
+      VTKOutputProps	      off
+      VTKOutputVTKWindow      off
+      VTKOutputViewProps      off
+      VTKOutputVolumes	      off
+    }
+    Line {
+      SrcBlock		      "Stylus Tool"
+      SrcPort		      1
+      DstBlock		      "Stylus Actor"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "vtkNDICertusTracker"
+      SrcPort		      1
+      DstBlock		      "Stylus Tool"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "vtkRenderer"
+      SrcPort		      1
+      DstBlock		      "Render Window"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Stylus Actor"
+      SrcPort		      1
+      DstBlock		      "vtkRenderer"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "vtkAxesActor"
+      SrcPort		      1
+      Points		      [20, 0; 0, -65]
+      DstBlock		      "vtkRenderer"
+      DstPort		      2
+    }
+  }
+}

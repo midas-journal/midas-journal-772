@@ -1,0 +1,54 @@
+# SimvtkGenerateXMLFile.cmake
+#
+# 1 macro, 1 argument.
+#
+# Macro: SIMVTK_GENERATE_XML_FILE
+#     ARGUMENT: ${ONE_CLASS}
+#        where ${ONE_CLASS} is the name of class to be XML wrapped
+#     OUTPUT: ${ONE_CLASS}.xml
+#
+MACRO(SIMVTK_GENERATE_XML_FILE ONE_CLASS)
+
+  # In case we were given a path with the class name
+  GET_FILENAME_COMPONENT(TMP_CLASS ${ONE_CLASS} NAME_WE)
+  GET_FILENAME_COMPONENT(TMP_DIR ${ONE_CLASS} PATH)
+
+  IF("${TMP_DIR}" STREQUAL "")
+    SET(TMP_HEADER_DIR ${KIT_HEADER_DIR})
+  ELSE("${TMP_DIR}" STREQUAL "")
+    SET(TMP_HEADER_DIR ${TMP_DIR})
+  ENDIF("${TMP_DIR}" STREQUAL "")
+
+  IF(NOT "${VTK_CLASS_WRAP_EXCLUDE_${TMP_CLASS}}" EQUAL 1)
+
+    #Ignore the files that were problems
+    LIST(FIND SKIP_CLASSES ${TMP_CLASS} TMP_SKIP_CLASS)
+
+    IF(${TMP_SKIP_CLASS} EQUAL -1)
+
+      IF("${VTK_CLASS_ABSTRACT_${TMP_CLASS}}" EQUAL 1)
+        SET(TMP_CONCRETE 0)
+      ELSE("${VTK_CLASS_ABSTRACT_${TMP_CLASS}}" EQUAL 1)
+        SET(TMP_CONCRETE 1)
+      ENDIF("${VTK_CLASS_ABSTRACT_${TMP_CLASS}}" EQUAL 1)
+
+      SET(TMP_INPUT "${TMP_HEADER_DIR}/${TMP_CLASS}.h")
+
+      # add custom command to output
+      ADD_CUSTOM_COMMAND(
+        OUTPUT ${VTKXML_OUTPUT_DIR}/${TMP_CLASS}.xml
+        DEPENDS ${VTKXML_EXE} ${VTKXML_HINTS} ${TMP_INPUT}
+        COMMAND ${VTKXML_EXE}
+        ARGS ${TMP_INPUT} ${VTKXML_HINTS} ${TMP_CONCRETE}
+          ${VTKXML_OUTPUT_DIR}/${TMP_CLASS}.xml
+        COMMENT "XML Wrapping - generating ${TMP_CLASS}.xml"
+        )
+
+    SET(TMP_XML_FILES ${TMP_XML_FILES}
+      ${VTKXML_OUTPUT_DIR}/${TMP_CLASS}.xml)
+
+    ENDIF(${TMP_SKIP_CLASS} EQUAL -1)
+
+  ENDIF(NOT "${VTK_CLASS_WRAP_EXCLUDE_${TMP_CLASS}}" EQUAL 1)
+
+ENDMACRO(SIMVTK_GENERATE_XML_FILE)

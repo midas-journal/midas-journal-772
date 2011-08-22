@@ -1,0 +1,72 @@
+/*=========================================================================
+
+  Program:   Visualization Toolkit
+  Module:    $RCSfile: vtkSimCocoaNSView.h,v $
+
+  Copyright (c) Ken Martin, Will Schroeder, Bill Lorensen
+  All rights reserved.
+  See Copyright.txt or http://www.kitware.com/Copyright.htm for details.
+
+     This software is distributed WITHOUT ANY WARRANTY; without even
+     the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+     PURPOSE.  See the above copyright notice for more information.
+
+=========================================================================*/
+// .NAME vtkSimCocoaNSView - Cocoa OpenGL rendering context
+//
+// .SECTION Description
+// This class is a subclass of Cocoa's NSView; it uses Objective-C++.
+// This class overrides several NSView methods.
+// To provide the usual VTK keyboard user interface, it overrides the
+// following methods from NSResponder: acceptsFirstResponder, keyDown:,
+// keyUp:, and flagsChanged:
+// To provide the usual VTK mouse user interface, it overrides the
+// following methods from NSResponder: mouseMoved:, mouseEntered:,
+// mouseExited: scrollWheel:, mouseDown:, rightMouseDown:,
+// otherMouseDown:, and resetCursorRects.
+// To be able to render and draw onscreen, it overrides drawRect:
+// from NSView.
+
+// Note that this class was previously a subclass of NSOpenGLView,
+// but starting with VTK 5.0 is now a subclass of NSView.
+//
+// .SECTION See Also
+// vtkCocoaRenderWindow vtkCocoaRenderWindowInteractor
+
+#ifndef __vtkSimCocoaNSView_h
+#define __vtkSimCocoaNSView_h
+
+#import <Cocoa/Cocoa.h>
+
+// Note: This file should be includable by both pure Objective-C and Objective-C++ source files.
+// To achieve this, we use the neat technique below:
+#ifdef __cplusplus
+  // Forward declarations
+  class vtkCocoaRenderWindow;
+  class vtkSimCocoaRenderWindowInteractor;
+  
+  // Type declarations
+  typedef vtkCocoaRenderWindow* vtkCocoaRenderWindowRef;
+  typedef vtkSimCocoaRenderWindowInteractor* vtkSimCocoaRenderWindowInteractorRef;
+#else
+  // Type declarations
+  typedef void* vtkCocoaRenderWindowRef;
+  typedef void* vtkSimCocoaRenderWindowInteractorRef;
+#endif
+
+@interface vtkSimCocoaNSView : NSView
+{
+  @private
+  vtkCocoaRenderWindowRef myVTKRenderWindow;
+  NSTrackingRectTag rolloverTrackingRectTag;
+  BOOL rolloverTrackingRectSet;
+}
+
+- (vtkCocoaRenderWindowRef)getVTKRenderWindow;
+- (void)setVTKRenderWindow:(vtkCocoaRenderWindowRef)theVTKRenderWindow;
+
+- (vtkSimCocoaRenderWindowInteractorRef)getInteractor;
+
+@end
+
+#endif /* __vtkSimCocoaNSView_h */
